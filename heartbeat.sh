@@ -18,8 +18,8 @@ do
         }' $time`
 
     echo $data
-    curl --location --request POST 'APP_ID.cloud.ditto.live/api/v3/store/write' \
-        --header 'X-DITTO-CLIENT-ID: AAAAAAAAAAAAAAAAAAAABQ==' \
+    curl --location --request POST '{APP_ID}.cloud.ditto.live/api/v4/store/write' \
+        --header 'Authorization: Bearer {YOUR_API_KEY}' \
         --header 'Content-Type: application/json' \
         --data-raw "$data"
     sleep 10
