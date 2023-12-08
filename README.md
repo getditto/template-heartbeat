@@ -39,4 +39,4 @@ node index.js
 
 ### Terminal 3
 
-Use with [Change Data Capture](https://docs.ditto.live/http/common/guides/kafka/intro) to listen to all changes from the server-side.
+Use with [Change Data Capture](https://docs.ditto.live/change-data-capture) to listen to all changes from the server-side.
