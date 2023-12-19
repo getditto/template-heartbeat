@@ -14,18 +14,18 @@ async function main () {
   ditto.disableSyncWithV3()
   ditto.startSync()
 
-	ditto.sync.registerSubscription(`
-		SELECT *
-		FROM heartbeat 
-		WHERE _id = 'heartbeat'
-	`)
-	ditto.store.registerObserver(`
-		SELECT *
-		FROM heartbeat 
-		WHERE _id = 'heartbeat'`,
-		(result) => {
+  ditto.sync.registerSubscription(`
+    SELECT *
+    FROM heartbeat
+    WHERE _id = 'heartbeat'
+  `)
+  ditto.store.registerObserver(`
+    SELECT *
+    FROM heartbeat
+    WHERE _id = 'heartbeat'`,
+    (result) => {
       console.log('result: ', result.items
-				.map((doc) => {
+        .map((doc) => {
           return doc.value
         })
       )
@@ -39,7 +39,7 @@ async function main () {
         { p } 
       )
     }
-	)
+  )
 } 
 
 main()
