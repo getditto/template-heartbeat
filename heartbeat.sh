@@ -18,7 +18,7 @@ do
 
     echo $data
     curl --location --request POST 'https://{REPLACE_WITH_YOUR_APP_ID}.cloud.ditto.live/api/v4/store/execute' \
-        --header 'Authorization: Bearer {REPLACE_WITH_YOUR_API_KEY' \
+        --header 'Authorization: Bearer {REPLACE_WITH_YOUR_API_KEY}' \
         --header 'Content-Type: application/json' \
         --data-raw "$data"
     sleep 10
